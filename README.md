@@ -1,0 +1,1 @@
+# blog-kenk11-ruby
