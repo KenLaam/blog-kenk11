@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog KenK11</title>
+  <title>KenK11's Blog</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,14 +11,17 @@
   <nav class="navbar navbar-light">
     <a class="navbar-brand" href="/">KenK11's Blog</a>
     <ul class="nav navbar-nav">
-      <%= link_to 'Home', new_article_path, class: 'nav-item active nav-link' %>
+      <%= link_to 'Home', articles_path, class: 'nav-item active nav-link' %>
       <%= link_to 'New Article', new_article_path, class: 'nav-item nav-link' %>
+      <%= link_to 'Most Viewed', articles_path, class: 'nav-item nav-link' %>
+      <%= link_to 'Most Commented', articles_url, class: 'nav-item nav-link' %>
     </ul>
-    <form class="form-inline pull-xs-right">
-      <input class="form-control" type="text" placeholder="Search">
-      <button class="btn btn-success-outline" type="submit">Search</button>
-    </form>
+    <%= form_tag(articles_path, :method => "get", id: "search-form", class: "form-inline pull-xs-right") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search title", class: "form-control" %>
+        <%= submit_tag "Search", class: "btn btn-success-outline" %>
+    <% end %>
   </nav>
+
   <%= yield %>
 
 </div>
