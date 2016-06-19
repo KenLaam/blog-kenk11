@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    Article.increment_counter(:view, @article.id)
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
@@ -77,6 +78,6 @@ class ArticlesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :body, :view, :updated_at)
   end
 end

@@ -2,12 +2,16 @@
   <div class="col-sm-8 col-sm-offset-2">
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title"><%= article.title %></h4>
+        <!--<h4 class="card-title"><%= article.title %></h4>-->
+        <h2><%= link_to article.title, article, class: 'card-title' %></h2>
         <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
-      </div>
-      <div class="card-footer">
         <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-primary-outline  ' %>
         <%= link_to 'Delete', article, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger-outline' %>
+      </div>
+      <div class="card-footer text-xs-right">
+        Total viewed: <%= article.view.nil? ? 0 : article.view %>
+        <!--<%= article.updated_at %>-->
+
       </div>
     </div>
   </div>
