@@ -9,7 +9,7 @@
 
 Submitted by: **Lam Hoang Vu**
 
-Time spent: **8** hours spent in total
+Time spent: **10** hours spent in total
 
 URL: **[http://blog-kenk11.herokuapp.com](http://blog-kenk11.herokuapp.com/)**
 

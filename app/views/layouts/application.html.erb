@@ -8,6 +8,17 @@
 </head>
 <body>
 <div class="container">
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand" href="/">KenK11's Blog</a>
+    <ul class="nav navbar-nav">
+      <%= link_to 'Home', new_article_path, class: 'nav-item active nav-link' %>
+      <%= link_to 'New Article', new_article_path, class: 'nav-item nav-link' %>
+    </ul>
+    <form class="form-inline pull-xs-right">
+      <input class="form-control" type="text" placeholder="Search">
+      <button class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+  </nav>
   <%= yield %>
 
 </div>
