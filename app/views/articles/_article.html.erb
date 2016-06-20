@@ -8,10 +8,10 @@
         <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-primary-outline  ' %>
         <%= link_to 'Delete', article, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger-outline' %>
       </div>
-      <div class="card-footer text-xs-right">
+      <div class="card-footer">
         Total viewed: <%= article.view.nil? ? 0 : article.view %>
-        <!--<%= article.updated_at %>-->
-
+        <br>
+        Last updated: <%= article.updated_at %>
       </div>
     </div>
   </div>

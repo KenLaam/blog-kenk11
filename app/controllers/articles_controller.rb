@@ -6,9 +6,9 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     if params[:search]
-      @articles = Article.search(params[:search]).order("created_at DESC")
+      @articles = Article.search(params[:search]).order('updated_at DESC')
     else
-      @articles = Article.all.order('created_at DESC')
+      @articles = Article.all.order('updated_at DESC')
     end
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
 
@@ -28,6 +28,16 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+  end
+
+  def most_viewed
+    @articles = Article.order('view DESC')
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  end
+
+  def last_updated
+    @articles = Article.order('updated_at DESC')
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
   # POST /articles

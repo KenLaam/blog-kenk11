@@ -1,10 +1,5 @@
 # Pre-work - *Blog KenK11*
 
-> HINT: Please
-> - include this README.md in your project and fill out the information. 
-> - remove the `README.rdoc` file that Rails generates. 
-> - remove all the HINT blocks in this file.
-
 **Blog KenK11** is a Ruby on Rails blog application.
 
 Submitted by: **Lam Hoang Vu**
@@ -30,11 +25,8 @@ The following **optional** features are implemented:
 * [ ] User can leave a comment on a post.
 * [ ] User can add "tags" to a post, and filter posts by tag. 
 
-> HINT: if you are unsure how to implement the Search feature, you can Google how to implement a simple search form. For example, one of the sites you will find is [this](http://www.jorgecoca.com/buils-search-form-ruby-rails/)
-
 The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
+* [x] User can see post sorted by viewed, last update. 
 
 ## Video Walkthrough 
 
