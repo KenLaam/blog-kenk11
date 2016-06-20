@@ -5,13 +5,22 @@
         <!--<h4 class="card-title"><%= article.title %></h4>-->
         <h2><%= link_to article.title, article, class: 'card-title' %></h2>
         <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
-        <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-primary-outline  ' %>
-        <%= link_to 'Delete', article, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger-outline' %>
+
       </div>
       <div class="card-footer">
-        Total viewed: <%= article.view.nil? ? 0 : article.view %>
-        <br>
-        Last updated: <%= article.updated_at %>
+        <div class="row">
+          <div class="col-md-6">
+            <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-primary-outline  ' %>
+            <%= link_to 'Delete', article, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger-outline' %>
+          </div>
+
+          <div class="col-md-6" align="right">
+            Last updated: <%= local_time_ago(article.updated_at) %>
+            <br>
+            <%= article.view.nil? ? 0 : article.view %> views
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

@@ -27,6 +27,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 * [x] User can see post sorted by viewed, last update. 
+* [x] User can fin all posts with keyword by title and body.
 
 ## Video Walkthrough 
 

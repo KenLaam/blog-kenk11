@@ -54,3 +54,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'redcarpet'
 
 gem 'simple_form'
+
+gem "spring", group: :development
+
+gem 'local_time'
