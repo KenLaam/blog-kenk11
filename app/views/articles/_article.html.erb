@@ -14,7 +14,7 @@
           </div>
 
           <div class="col-md-6" align="right">
-            Last updated: <%= local_time_ago(article.updated_at) %>
+            Last updated: <%= time_ago_in_words (article.updated_at) %> ago
             <br>
             <%= article.view.nil? ? 0 : article.view %> views
           </div>
