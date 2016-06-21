@@ -18,7 +18,7 @@
         <%= link_to 'Home', articles_path, class: 'nav-item active nav-link' %>
         <%= link_to 'Last Updated', last_updated_path, class: 'nav-item nav-link' %>
         <%= link_to 'Most Viewed', most_viewed_path, class: 'nav-item nav-link' %>
-        <%= link_to 'New Post', new_article_path, class: 'nav-item nav-link' %>
+        <%= link_to 'New Article', new_article_path, class: 'nav-item nav-link' %>
       </ul>
       <%= form_tag(articles_path, :method => "get", id: "search-form", class: "form-inline pull-xs-right") do %>
           <%= text_field_tag :search, params[:search], placeholder: "Search with keyword", class: "form-control" %>
